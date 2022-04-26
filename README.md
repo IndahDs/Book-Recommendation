@@ -146,7 +146,7 @@ Dalam dataset tersebut berisi 3 file csv, yaitu:
       Akan dilakukan *training data user* buku dengan model SVD dari library Surprise yang selanjutnya 10 buku dengan prediksi rating tertinggi akan diurutkan.
       Hasil rekomendasinya sebagai berikut:
       
-      ![image](https://user-images.githubusercontent.com/79253590/138238871-364eb510-d58d-4097-a957-4c58acce83f3.png)
+      ![rekomen akhir](https://user-images.githubusercontent.com/79253590/165241333-612183cb-473d-48d9-b017-cdc12d7a6377.png)
       
   
 # Evaluasi
@@ -170,7 +170,7 @@ untuk hasil evaluasi dari model SVD menggunakan metode *k-fold cross validation*
 Hasil dari perhitungannya adalah sebagai berikut:
 
 
-  ![hasil](https://user-images.githubusercontent.com/79253590/165237102-07458703-4712-4ced-a3c8-a31095a5cac6.png)
+  ![hasil](https://user-images.githubusercontent.com/79253590/165241391-269b6653-e9d6-4d15-b27f-9b16e5171210.png)
   
 
   Dalam perhitungan ini, diperoleh nilai rata-rata *Mean Absolute Error* (MAE) sebesar 1.63 dan nilai rata-rata *Root Mean Squared Error* (RMSE) sebesar 1.26 . Sehingga dapat kita buat kesimpulan bahwa pada model ini nilai error nya cukup kecil sehingga menandakan model tersebut sudah baik. Hal ini dibuktikan juga dengan hasil rekomendasi buku yang cukup baik dan sesuai kategorinya.
