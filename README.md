@@ -41,11 +41,11 @@ Solusi yang dapat dilakukan untuk memenuhi tujuan dari proyek ini diantaranya :
       
       Sistem rekomendasi berdasarkan Popularitas bekerja dengan tren. Ini pada dasarnya menggunakan item yang sedang tren saat ini. Misalnya, jika ada produk yang biasanya dibeli oleh setiap pengguna baru, maka ada kemungkinan produk tersebut akan menyarankan item tersebut kepada pengguna yang baru saja mendaftar [[3]](https://medium.com/the-owl/recommender-systems-f62ad843f70c). Teknik yang akan digunakan adalah *weighted rating*. Teknik ini dapat berguna untuk merekomendasikan buku kepada seluruh pengguna baik yang belum memiliki riwayat transaksi maupun yang sudah.
       
-   * *Model-Based Collaborative filtering Recommendation*
+   *  *Model-Based Collaborative filtering Recommendation*
       
       Merekomendasikan buku berdasarkan riwayat transaksi (rating) pengguna untuk memprediksi dan menghitung rating yang akan diberikan pengguna pada buku lain menggunakan model machine learning SVD. Algoritma berbasis matrix factorization ini dipopulerkan oleh Simon Funk pada Netflix Prize. Kekurangan dari collaborative filtering tidak bisa merekomendasikan item yang tidak memiliki riwayat transaksi.
   
-  * *Singular Value Decomposition*
+  *   *Singular Value Decomposition*
   
       Salah satu cara untuk menangani masalah skalabilitas dan sparsity yang dibuat oleh Collaborative Filtering (CF) adalah dengan memanfaatkan model faktor laten untuk menangkap kesamaan antara pengguna dan item. Pada dasarnya, jika ingin mengubah masalah rekomendasi menjadi masalah optimasi. Kita dapat melihatnya sebagai seberapa baik kita dalam memprediksi peringkat untuk item yang diberikan pengguna. Salah satu metrik umum adalah Root Mean Square Error (RMSE). Semakin rendah RMSE, semakin baik kinerjanya. Karena tidak mengetahui peringkat untuk item yang tidak terlihat, tentunya akan mengabaikannya untuk sementara. Yaitu, hanya meminimalkan RMSE pada entri yang diketahui dalam matriks utilitas. Untuk mencapai RMSE minimal, Singular Value Decomposition (SVD) diadopsi seperti yang ditunjukkan pada rumus di bawah ini.
       
@@ -62,7 +62,7 @@ SVD memiliki properti besar yang memiliki minimal rekonstruksi Sum of Square Err
     SVD berhasil menangani masalah skalabilitas dan sparsity yang ditimbulkan oleh CF. Namun, SVD bukan tanpa flaw. Kelemahan utama dari SVD adalah tidak ada sedikit penjelasan tentang alasan untuk merekomendasikan suatu item kepada pengguna. Ini bisa menjadi masalah besar jika pengguna ingin tahu mengapa item tertentu direkomendasikan untuk mereka.
 
 
-  * *k-Fold Cross-Validation*
+  *   *k-Fold Cross-Validation*
  
      Validasi silang adalah prosedur pengambilan sampel ulang yang digunakan untuk mengevaluasi model pembelajaran mesin pada sampel data terbatas.
 Prosedur ini memiliki parameter tunggal yang disebut k yang mengacu pada jumlah grup yang akan dibagi menjadi sampel data tertentu. Dengan demikian, prosedur ini sering disebut k-fold cross-validation. Ketika nilai spesifik untuk k dipilih, nilai tersebut dapat digunakan sebagai pengganti k dalam referensi ke model, seperti k=10 menjadi validasi silang 10 kali lipat.
