@@ -137,9 +137,9 @@ Dalam dataset tersebut berisi 3 file csv, yaitu:
       
       ![image](https://user-images.githubusercontent.com/79253590/138235856-811f8ac7-2233-4ac9-a3f0-59e4e96527b2.png)
       
-      Plot hasil rekomendasi dengan menerapkan *weighted rating* sebagai berikut:
+      Hasil rekomendasi dengan menerapkan *weighted rating* sebagai berikut:
       
-      ![image](https://user-images.githubusercontent.com/79253590/138238337-6f7a03f5-38d0-45cb-8181-afcff0c6863f.png)
+      ![weightres](https://user-images.githubusercontent.com/79253590/165240268-55997326-bdba-4027-9103-0cd64145a810.png)
      
    * *Model-Based Collaborative filtering Recommendation* 
       
