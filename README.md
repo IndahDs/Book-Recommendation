@@ -50,7 +50,7 @@ Solusi yang dapat dilakukan untuk memenuhi tujuan dari proyek ini diantaranya :
       Salah satu cara untuk menangani masalah skalabilitas dan sparsity yang dibuat oleh Collaborative Filtering (CF) adalah dengan memanfaatkan model faktor laten untuk menangkap kesamaan antara pengguna dan item. Pada dasarnya, jika ingin mengubah masalah rekomendasi menjadi masalah optimasi. Kita dapat melihatnya sebagai seberapa baik kita dalam memprediksi peringkat untuk item yang diberikan pengguna. Salah satu metrik umum adalah Root Mean Square Error (RMSE). Semakin rendah RMSE, semakin baik kinerjanya. Karena tidak mengetahui peringkat untuk item yang tidak terlihat, tentunya akan mengabaikannya untuk sementara. Yaitu, hanya meminimalkan RMSE pada entri yang diketahui dalam matriks utilitas. Untuk mencapai RMSE minimal, Singular Value Decomposition (SVD) diadopsi seperti yang ditunjukkan pada rumus di bawah ini.
       
       
-      ![image]![rumus svd](https://user-images.githubusercontent.com/79253590/165235426-16bed6b9-a2fc-4a7d-8d4e-28bfe1f708c9.png)
+      ![rumus svd](https://user-images.githubusercontent.com/79253590/165235426-16bed6b9-a2fc-4a7d-8d4e-28bfe1f708c9.png)
       
       
      X menunjukkan matriks utilitas, danU adalah matriks singular kiri, yang mewakili hubungan antara pengguna dan faktor laten. S adalah matriks diagonal yang menggambarkan kekuatan setiap faktor laten, sedangkan transpos V adalah matriks singular kanan, yang menunjukkan kesamaan antara item dan faktor laten. Secara default, jumlah faktor laten adalah 100. Faktor laten ini mampu menangkap preferensi peringkat item pengguna yang diketahui & dalam prosesnya mampu memprediksi peringkat perkiraan untuk semua pasangan item pengguna di mana pengguna belum menilai item.
@@ -58,7 +58,7 @@ SVD mengurangi dimensi matriks utilitas dengan mengekstrak faktor latennya. Pada
 SVD memiliki properti besar yang memiliki minimal rekonstruksi Sum of Square Error (SSE) dan oleh karena itu, ini juga biasa digunakan dalam pengurangan dimensi. Rumus di bawah ini menggantikan X dengan A, dan S dengan Σ. 
 
 
-      ![image]![rumus sse](https://user-images.githubusercontent.com/79253590/165235515-eff3e815-9508-4ded-995a-08ea8d70af97.png)
+     ![rumus sse](https://user-images.githubusercontent.com/79253590/165235515-eff3e815-9508-4ded-995a-08ea8d70af97.png)
       
 
     Ternyata RMSE dan SSE terkait secara monoton. Artinya semakin rendah SSE, semakin rendah RMSE. Dengan sifat nyaman SVD yang meminimalkan SSE, kita tahu bahwa itu juga meminimalkan RMSE. Jadi, SVD adalah alat yang hebat untuk masalah pengoptimalan ini. Untuk memprediksi item yang tidak terlihat untuk pengguna, kita cukup mengalikan U, Σ, dan T.
@@ -140,9 +140,8 @@ Dalam dataset tersebut berisi 3 file csv, yaitu:
       Plot hasil rekomendasi dengan menerapkan *weighted rating* sebagai berikut:
       
       ![image](https://user-images.githubusercontent.com/79253590/138238337-6f7a03f5-38d0-45cb-8181-afcff0c6863f.png)
-      
-      
-    * *Model-Based Collaborative filtering Recommendation*
+     
+   * *Model-Based Collaborative filtering Recommendation* 
       
       Akan dilakukan *training data user* buku dengan model SVD dari library Surprise yang selanjutnya 10 buku dengan prediksi rating tertinggi akan diurutkan.
       Hasil rekomendasinya sebagai berikut:
@@ -157,13 +156,13 @@ untuk hasil evaluasi dari model SVD menggunakan metode *k-fold cross validation*
     
     Merepresentasikan rata-rata perbedaan mutlak antara nilai aktual dan prediksi pada dataset. MAE mengukur rata-rata residu dalam dataset. MAE lebih intuitif dalam memberikan rata-rata error dari keseluruhan data.
     
-    ![image]![mae](https://user-images.githubusercontent.com/79253590/165236793-ed34e7a7-df3c-426c-b667-f78a2af82457.png)
+   ![mae](https://user-images.githubusercontent.com/79253590/165236793-ed34e7a7-df3c-426c-b667-f78a2af82457.png)
     
 2. *Root Mean Squared Error* (RMSE)
 
     Cara menghitungnya yaitu dengan mengkuadratkan error (prediksi – observasi) dibagi dengan jumlah data (= rata-rata), lalu diakarkan. 
     
-    ![image]![rmse](https://user-images.githubusercontent.com/79253590/165237041-38e5aa9e-81d8-4f35-94ca-d690b4f1f8e4.png)
+    ![rmse](https://user-images.githubusercontent.com/79253590/165237041-38e5aa9e-81d8-4f35-94ca-d690b4f1f8e4.png)
 
 # Kesimpulan
  
@@ -171,7 +170,7 @@ untuk hasil evaluasi dari model SVD menggunakan metode *k-fold cross validation*
 Hasil dari perhitungannya adalah sebagai berikut:
 
 
-  ![image]![hasil](https://user-images.githubusercontent.com/79253590/165237102-07458703-4712-4ced-a3c8-a31095a5cac6.png)
+  ![hasil](https://user-images.githubusercontent.com/79253590/165237102-07458703-4712-4ced-a3c8-a31095a5cac6.png)
   
 
   Dalam perhitungan ini, diperoleh nilai rata-rata *Mean Absolute Error* (MAE) sebesar 1.63 dan nilai rata-rata *Root Mean Squared Error* (RMSE) sebesar 1.26 . Sehingga dapat kita buat kesimpulan bahwa pada model ini nilai error nya cukup kecil sehingga menandakan model tersebut sudah baik. Hal ini dibuktikan juga dengan hasil rekomendasi buku yang cukup baik dan sesuai kategorinya.
