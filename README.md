@@ -55,7 +55,7 @@ Solusi yang dapat dilakukan untuk memenuhi tujuan dari proyek ini diantaranya :
       
      X menunjukkan matriks utilitas, danU adalah matriks singular kiri, yang mewakili hubungan antara pengguna dan faktor laten. S adalah matriks diagonal yang menggambarkan kekuatan setiap faktor laten, sedangkan transpos V adalah matriks singular kanan, yang menunjukkan kesamaan antara item dan faktor laten. Secara default, jumlah faktor laten adalah 100. Faktor laten ini mampu menangkap preferensi peringkat item pengguna yang diketahui & dalam prosesnya mampu memprediksi peringkat perkiraan untuk semua pasangan item pengguna di mana pengguna belum menilai item.
 SVD mengurangi dimensi matriks utilitas dengan mengekstrak faktor latennya. Pada dasarnya, memetakan setiap pengguna dan setiap item ke dalam ruang laten dengan dimensi r. Oleh karena itu, ini membantu kita dalam lebih memahami hubungan antara pengguna dan item karena mereka dapat dibandingkan secara langsung.
-SVD memiliki properti besar yang memiliki minimal rekonstruksi Sum of Square Error (SSE) dan oleh karena itu, ini juga biasa digunakan dalam pengurangan dimensi. Rumus di bawah ini menggantikan X dengan A, dan S dengan Σ. 
+SVD memiliki properti besar yang memiliki minimal rekonstruksi Sum of Square Error (SSE) dan oleh karena itu, ini juga biasa digunakan dalam pengurangan dimensi. Rumus di bawah ini menggantikan X dengan A, dan S dengan Σ.
 
 
      ![rumus sse](https://user-images.githubusercontent.com/79253590/165235515-eff3e815-9508-4ded-995a-08ea8d70af97.png)
