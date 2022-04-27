@@ -53,7 +53,7 @@ Solusi yang dapat dilakukan untuk memenuhi tujuan dari proyek ini diantaranya :
       ![rumus svd](https://user-images.githubusercontent.com/79253590/165235426-16bed6b9-a2fc-4a7d-8d4e-28bfe1f708c9.png)
       
       
-     X menunjukkan matriks utilitas, danU adalah matriks singular kiri, yang mewakili hubungan antara pengguna dan faktor laten. S adalah matriks diagonal yang menggambarkan kekuatan setiap faktor laten, sedangkan transpos V adalah matriks singular kanan, yang menunjukkan kesamaan antara item dan faktor laten. Secara default, jumlah faktor laten adalah 100. Faktor laten ini mampu menangkap preferensi peringkat item pengguna yang diketahui & dalam prosesnya mampu memprediksi peringkat perkiraan untuk semua pasangan item pengguna di mana pengguna belum menilai item.
+    X menunjukkan matriks utilitas, danU adalah matriks singular kiri, yang mewakili hubungan antara pengguna dan faktor laten. S adalah matriks diagonal yang menggambarkan kekuatan setiap faktor laten, sedangkan transpos V adalah matriks singular kanan, yang menunjukkan kesamaan antara item dan faktor laten. Secara default, jumlah faktor laten adalah 100. Faktor laten ini mampu menangkap preferensi peringkat item pengguna yang diketahui & dalam prosesnya mampu memprediksi peringkat perkiraan untuk semua pasangan item pengguna di mana pengguna belum menilai item.
 SVD mengurangi dimensi matriks utilitas dengan mengekstrak faktor latennya. Pada dasarnya, memetakan setiap pengguna dan setiap item ke dalam ruang laten dengan dimensi r. Oleh karena itu, ini membantu kita dalam lebih memahami hubungan antara pengguna dan item karena mereka dapat dibandingkan secara langsung.
 SVD memiliki properti besar yang memiliki minimal rekonstruksi Sum of Square Error (SSE) dan oleh karena itu, ini juga biasa digunakan dalam pengurangan dimensi. Rumus di bawah ini menggantikan X dengan A, dan S dengan Σ.
 
@@ -67,7 +67,7 @@ SVD memiliki properti besar yang memiliki minimal rekonstruksi Sum of Square Err
 
    *  *k-Fold Cross-Validation*
    
-    Validasi silang adalah prosedur pengambilan sampel ulang yang digunakan untuk mengevaluasi model pembelajaran mesin pada sampel data terbatas.
+       Validasi silang adalah prosedur pengambilan sampel ulang yang digunakan untuk mengevaluasi model pembelajaran mesin pada sampel data terbatas.
 Prosedur ini memiliki parameter tunggal yang disebut k yang mengacu pada jumlah grup yang akan dibagi menjadi sampel data tertentu. Dengan demikian, prosedur ini sering disebut k-fold cross-validation. Ketika nilai spesifik untuk k dipilih, nilai tersebut dapat digunakan sebagai pengganti k dalam referensi ke model, seperti k=10 menjadi validasi silang 10 kali lipat.
     
     Validasi silang terutama digunakan dalam pembelajaran mesin terapan untuk memperkirakan keterampilan model pembelajaran mesin pada data yang tidak terlihat. Yaitu, menggunakan sampel terbatas untuk memperkirakan bagaimana model diharapkan tampil secara umum ketika digunakan untuk membuat prediksi pada data yang tidak digunakan selama pelatihan model.
