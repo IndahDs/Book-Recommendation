@@ -150,7 +150,7 @@ Dalam dataset tersebut berisi 3 file csv, yaitu:
       
   
 # Evaluasi
-untuk hasil evaluasi dari model SVD menggunakan metode *k-fold cross validation*. Metode ini adalah salah satu dari jenis pengujian *cross validation* yang berfungsi untuk menilai kinerja proses sebuah metode algoritme dengan membagi sampel data secara acak dan mengelompokkan data tersebut sebanyak nilai *K fold*. Dimana data training adalah K-1 fold dan sisanya digunakan sebagai data testing. Kemudian hasil testing dihitung dengan matriks:
+untuk hasil evaluasi dari model SVD menggunakan metode *k-fold cross validation*. Metode ini adalah salah satu dari jenis pengujian *cross validation* yang berfungsi untuk menilai kinerja proses sebuah metode algoritme dengan membagi sampel data secara acak dan mengelompokkan data tersebut sebanyak nilai *K fold*. Dimana data training adalah K-10 fold dan sisanya digunakan sebagai data testing. Kemudian hasil testing dihitung dengan matriks:
 
 1. *Mean Absolute Error* (MAE)
     
