@@ -61,7 +61,7 @@ SVD memiliki properti besar yang memiliki minimal rekonstruksi Sum of Square Err
      ![rumus sse](https://user-images.githubusercontent.com/79253590/165235515-eff3e815-9508-4ded-995a-08ea8d70af97.png)
       
 
-    Ternyata RMSE dan SSE terkait secara monoton. Artinya semakin rendah SSE, semakin rendah RMSE. Dengan sifat nyaman SVD yang meminimalkan SSE, kita tahu bahwa itu juga meminimalkan RMSE. Jadi, SVD adalah alat yang hebat untuk masalah pengoptimalan ini. Untuk memprediksi item yang tidak terlihat untuk pengguna, kita cukup mengalikan U, Σ, dan T.
+    Ternyata RMSE dan SSE terkait secara monoton. Artinya semakin rendah SSE, semakin rendah RMSE. Dengan sifat SVD yang meminimalkan SSE, kita tahu bahwa itu juga meminimalkan RMSE. Jadi, SVD adalah alat yang hebat untuk masalah pengoptimalan ini. Untuk memprediksi item yang tidak terlihat untuk pengguna, kita cukup mengalikan U, Σ, dan T.
     
     SVD berhasil menangani masalah skalabilitas dan sparsity yang ditimbulkan oleh CF. Namun, SVD bukan tanpa flaw. Kelemahan utama dari SVD adalah tidak ada sedikit penjelasan tentang alasan untuk merekomendasikan suatu item kepada pengguna. Ini bisa menjadi masalah besar jika pengguna ingin tahu mengapa item tertentu direkomendasikan untuk mereka.
 
